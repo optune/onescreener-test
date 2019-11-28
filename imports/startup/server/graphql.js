@@ -15,7 +15,7 @@ import { userId } from './loadData'
 const schema = makeExecutableSchema(getSchema())
 
 
-const context = currentContext => ({
+const getContext = userId => currentContext => ({
   ...currentContext,
   userId,
 })
@@ -24,9 +24,9 @@ const context = currentContext => ({
  * Apollo GraphQL Server
  */
 
-export const startGraphQLServer = () => {
+export const startGraphQLServer = userId => {
   setup({
     schema,
-    context,
+    context: getContext(userId),
   })
 }
