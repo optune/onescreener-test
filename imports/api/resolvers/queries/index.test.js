@@ -4,10 +4,11 @@
 
 import { assert } from 'chai'
 
-import { queries } from './index'
+import { Query } from './index'
 
 describe(__filename, function() {
   it('page', function() {
-    assert.isFunction(queries.page)
+    assert.isFunction(Query.page)
+    assert.isUndefined(Query.user)
   })
 })

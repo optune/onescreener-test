@@ -1,9 +1,12 @@
 {
   "name": "onescreener-test",
   "private": true,
+  "author": "Joel Meiller",
+  "version": "1.0.0",
   "scripts": {
     "start": "meteor run",
     "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-watch": "TEST_WATCH=1 meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
@@ -17,6 +20,7 @@
     "apollo-link": "^1.2.13",
     "apollo-link-ddp": "^2.1.0",
     "apollo-link-error": "^1.1.12",
+    "chai": "^4.2.0",
     "graphql": "^14.5.8",
     "graphql-load": "^0.1.1",
     "graphql-tag": "^2.10.1",
@@ -41,7 +45,6 @@
     "mainModule": {
       "client": "client/main.js",
       "server": "server/main.js"
-    },
-    "testModule": "tests/main.js"
+    }
   }
 }
