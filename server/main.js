@@ -8,11 +8,11 @@ import pkg from '../package.json'
 Meteor.startup(() => {
   console.log(`Starting ${pkg.name} ...`)
 
-  // Code to run on server startup.
-  startGraphQLServer()
-  console.log('✅ GraphQL server initialized')
-
   // Load data
-  loadData()
+  userId = loadData()
   console.log('✅ Data loaded')
+
+  // Code to run on server startup.
+  startGraphQLServer(userId)
+  console.log('✅ GraphQL server initialized')
 })
