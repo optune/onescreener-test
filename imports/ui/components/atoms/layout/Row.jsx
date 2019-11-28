@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { MediaSmall } from '../../../styles/media'
+
 export const Row = styled.div`
   position: relative;
   width: 50%;
@@ -7,5 +9,10 @@ export const Row = styled.div`
   justify-content: 'center';
   align-items: center;
   flex-flow: ${({ flow }) => flow || 'column'};
-  padding: 1rem 1.5rem;
+  margin: 1rem 1.5rem;
+
+  @media ${MediaSmall} {
+    width: 100%;
+    margin: 1rem 0.5rem;
+  }
 `
