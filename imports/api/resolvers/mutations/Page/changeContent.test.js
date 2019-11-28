@@ -5,9 +5,7 @@ import { Random } from 'meteor/random'
 import { resetDatabase } from 'meteor/xolvio:cleaner'
 
 // API
-import {
-  ContentType,
-} from '/imports/api'
+import { ContentType } from '/imports/api'
 
 // Collections
 import { Pages } from '/imports/db'
@@ -28,11 +26,15 @@ describe(__filename, function() {
 
   before(function() {
     doc = {
-        title: 'Test Title',
-        type: ContentType.TEXT,
-        text: 'Test Text',
+      title: 'Test Title',
+      type: ContentType.TEXT,
+      text: 'Test Text',
     }
-    pageId = Pages.insert({ content: { type: ContentType.NONE }, logo: { text: 'Logo Text' }, userId })
+    pageId = Pages.insert({
+      content: { type: ContentType.NONE },
+      logo: { text: 'Logo Text' },
+      userId,
+    })
     pageBefore = Pages.findOne(pageId)
   })
 

@@ -30,5 +30,7 @@ export const changeLogo = function(root, { input }, { userId }) {
 
   updatePage({ page, userId, values })
 
+  console.log('Test')
+
   return true
 }
