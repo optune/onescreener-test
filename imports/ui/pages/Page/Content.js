@@ -66,8 +66,8 @@ const Content = ({ page, navigate }) => {
     content: { title: '', text: '', type: ContentType.NONE },
   }
 
-  const [text, setText] = useState(content.text)
-  const [title, setTitle] = useState(content.title)
+  const [text, setText] = useState(content.text || '')
+  const [title, setTitle] = useState(content.title || '')
   const [contentType, setContentType] = useState(content.type)
 
   const dirty =
