@@ -1,8 +1,7 @@
 // React
 import React, { useState } from 'react'
-import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
-import { Link } from '@reach/router'
+import styled from 'styled-components'
 
 // API
 import { ContentType } from '/imports/api'
@@ -29,9 +28,6 @@ import { PAGE } from '../../graphql/queries'
 
 import { withQuery } from '../../mixins/withQuery'
 
-const ContentLink = styled(Link)`
-  width: 100%;
-`
 
 const ContentButton = styled(Button)`
   display: flex;
@@ -109,6 +105,8 @@ const Content = ({ page, navigate }) => {
       <ButtonBar
         dirty={dirty}
         mutation={CHANGE_CONTENT}
+        navLink="/logo"
+        navText="Edit Logo"
         onSave={save =>
           save({
             text,

@@ -1,6 +1,7 @@
 /* eslint-disable react/display-name */
 import React, { useState, useEffect } from 'react'
 import { useMutation } from '@apollo/react-hooks'
+import { Link } from '@reach/router'
 import styled from 'styled-components'
 
 // Styles
@@ -101,12 +102,15 @@ const ActionButton = ({
 export const ButtonBar = ({
   dirty,
   mutation,
+  navLink,
+  navText,
   onSave,
   refetchQuery,
   saveText,
 }) => (
   <BottomNavigation>
     <NavigationBar>
+      <NavigationItem />
       <NavigationItem primary>
         <ActionButton
           buttonText={saveText}
@@ -115,6 +119,11 @@ export const ButtonBar = ({
           onSave={onSave}
           refetchQuery={refetchQuery}
         />
+      </NavigationItem>
+      <NavigationItem>
+        <Link to={navLink}>
+          <Button secondary>{navText}</Button>
+        </Link>
       </NavigationItem>
     </NavigationBar>
   </BottomNavigation>

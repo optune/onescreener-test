@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 
 // React
-import React from 'react'
+import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import styled from 'styled-components'
 
 // Atoms
 import { Input } from '../../components/atoms/forms/Input'
@@ -46,6 +48,8 @@ const Logo = ({ page }) => {
       <ButtonBar
         dirty={dirty}
         mutation={CHANGE_LOGO}
+        navLink="/content"
+        navText="Edit Content"
         onSave={save =>
           save({
             text,
