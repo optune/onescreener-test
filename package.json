@@ -20,6 +20,7 @@
     "apollo-link": "^1.2.13",
     "apollo-link-ddp": "^2.1.0",
     "apollo-link-error": "^1.1.12",
+    "apollo-link-http": "^1.5.16",
     "chai": "^4.2.0",
     "graphql": "^14.5.8",
     "graphql-load": "^0.1.1",
