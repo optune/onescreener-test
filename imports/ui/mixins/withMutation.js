@@ -7,7 +7,12 @@ export const withMutation = (mutation, refetchQuery) => Component => {
   const Mutation = props => {
     const refetchQueries = refetchQuery ? [{ query: refetchQuery }] : []
     const [mutate] = useMutation(mutation, { refetchQueries })
-    return <Component {...props} mutate={values => mutate({ variables: { values } })} />
+    return (
+      <Component
+        {...props}
+        mutate={values => mutate({ variables: { values } })}
+      />
+    )
   }
 
   return Mutation

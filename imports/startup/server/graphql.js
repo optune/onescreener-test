@@ -1,5 +1,5 @@
 import { setup } from 'meteor/swydo:ddp-apollo'
-import { Random } from 'meteor/meteor'
+import { Random } from 'meteor/meteor'
 
 import { makeExecutableSchema } from 'graphql-tools'
 import { getSchema } from 'graphql-load'
@@ -13,7 +13,6 @@ import { userId } from './loadData'
  */
 
 const schema = makeExecutableSchema(getSchema())
-
 
 const getContext = userId => currentContext => ({
   ...currentContext,

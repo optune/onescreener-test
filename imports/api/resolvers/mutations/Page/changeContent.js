@@ -21,7 +21,7 @@ export const changeContent = function(root, { input }, { userId }) {
       type,
     },
   }
-  
+
   /*
    * Update page
    */

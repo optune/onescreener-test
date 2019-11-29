@@ -12,8 +12,8 @@ export const updatePage = ({ page, userId, values }) => {
   const pageModifier = getUpdateModifier({ updateValues })
 
   try {
-    Pages.update({ _id: page._id }, pageModifier)
-  } catch(error) {
+    Pages.update({ _id: page._id }, pageModifier)
+  } catch (error) {
     console.error(error)
     throw new Meteor.Error('Update failed', error)
   }

@@ -39,7 +39,10 @@ const setObjectUpdateValues = ({ name, object }) => {
       if (object[key] === null) {
         objectModifier.$unset[`${name}.${key}`] = ' '
       } else {
-        objectModifier.$set[`${name}.${key}`] = ['attachments', 'image'].includes(key)
+        objectModifier.$set[`${name}.${key}`] = [
+          'attachments',
+          'image',
+        ].includes(key)
           ? getAttachments(object[key])
           : object[key]
       }
