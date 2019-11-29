@@ -1,10 +1,8 @@
 import gql from 'graphql-tag'
 
-
 /*
  * Edit Page
  */
-
 
 export const CHANGE_CONTENT = gql`
   mutation changeContent($values: ContentInput!) {

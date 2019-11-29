@@ -1,5 +1,9 @@
 import styled from 'styled-components'
-import { ColorMonza, ColorStormGray, ColorLightGrey } from '../../../styles/color'
+import {
+  ColorMonza,
+  ColorStormGray,
+  ColorLightGrey,
+} from '../../../styles/color'
 import { MediaSmall } from '../../../styles/media'
 
 export const Input = styled.input`
