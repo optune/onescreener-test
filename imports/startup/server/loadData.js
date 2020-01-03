@@ -2,11 +2,14 @@ import { Random } from 'meteor/random'
 
 import { Pages } from '/imports/db'
 
+const RELOAD = false
+
 export const loadData = () => {
   const pages = Pages.find()
   let userId
 
-  if (pages.count() === 0) {
+  if (pages.count() === 0 || RELOAD) {
+    Pages.remove({})
     userId = Random.id()
     Pages.insert({
       content: {
@@ -15,6 +18,11 @@ export const loadData = () => {
         type: 'TEXT',
       },
       logo: {
+        image: {
+          url:
+            'http://res.cloudinary.com/optune-me/image/upload/v1565795543/onescreener-v2/prod/ashley-afterhour-1/rSDDmPGA-2_zvdzqp.png',
+        },
+        size: 'M',
         text: '',
       },
       userId,
