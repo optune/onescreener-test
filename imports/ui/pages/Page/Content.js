@@ -115,7 +115,7 @@ const Content = ({ page, navigate }) => {
         }
         refetchQuery={PAGE}
         saveText={t('page.content.save')}
-        previewText={t('page.preview.open')}        
+        previewText={t('page.preview.open')}
       />
     </Page>
   )
