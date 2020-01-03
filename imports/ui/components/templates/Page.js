@@ -54,7 +54,10 @@ export const Page = ({ page }) => {
     PageComponent = (
       <Fragment>
         <GlobalStyle />
-        <PageContainer image="" color="#FFF">
+        <PageContainer
+          image="http://res.cloudinary.com/optune-me/image/upload/v1565795382/onescreener-v2/prod/ashley-afterhour-1/csm_DJ_Snake_lacht_augen_sichtbar_f333cb1d2e_yztfsw.jpg"
+          color="#FFF"
+        >
           {/* Back Link to onescreener.com */}
           <BackLink
             href="https://www.onescreener.com"
