@@ -57,6 +57,7 @@ const Logo = ({ page }) => {
         }
         refetchQuery={PAGE}
         saveText={t('page.logo.save')}
+        previewText={t('page.preview.open')}
       />
     </Page>
   )
