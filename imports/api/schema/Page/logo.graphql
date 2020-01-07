@@ -1,4 +1,10 @@
+type LogoImage {
+  url: String!
+}
+
 type Logo {
+  image: LogoImage
+  size: String
   text: String
 }
 

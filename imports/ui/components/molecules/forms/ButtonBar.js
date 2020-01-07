@@ -107,10 +107,15 @@ export const ButtonBar = ({
   onSave,
   refetchQuery,
   saveText,
+  previewText,
 }) => (
   <BottomNavigation>
     <NavigationBar>
-      <NavigationItem />
+      <NavigationItem>
+        <Link to={navLink}>
+          <Button secondary>{navText}</Button>
+        </Link>
+      </NavigationItem>
       <NavigationItem primary>
         <ActionButton
           buttonText={saveText}
@@ -121,9 +126,13 @@ export const ButtonBar = ({
         />
       </NavigationItem>
       <NavigationItem>
-        <Link to={navLink}>
-          <Button secondary>{navText}</Button>
-        </Link>
+        <a
+          href={`${Meteor.absoluteUrl()}preview`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button secondary>{previewText}</Button>
+        </a>
       </NavigationItem>
     </NavigationBar>
   </BottomNavigation>

@@ -22,6 +22,9 @@
         "label": "Logo text"
       },
       "save": "Save Logo"
+    },
+    "preview": {
+      "open": "Open preview"
     }
   }
 }

@@ -9,6 +9,10 @@ export const PAGE = gql`
         text
       }
       logo {
+        image {
+          url
+        }
+        size
         text
       }
     }

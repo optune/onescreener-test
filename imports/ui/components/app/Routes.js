@@ -10,6 +10,7 @@ import {
   // Page
   Content,
   Logo,
+  Preview,
 } from '/imports/ui/pages'
 
 const NotFound = () => (
@@ -26,6 +27,8 @@ export const Routes = props => (
 
     <Content path="content" {...props} />
     <Logo path="logo" {...props} />
+
+    <Preview path="preview" {...props} />
 
     <NotFound default />
   </Router>
