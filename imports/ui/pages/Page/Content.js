@@ -104,8 +104,8 @@ const Content = ({ page, navigate }) => {
       <ButtonBar
         dirty={dirty}
         mutation={CHANGE_CONTENT}
-        navLink="/logo"
-        navText="Edit Logo"
+        navLink='/logo'
+        navText='Edit Logo'
         onSave={save =>
           save({
             text,

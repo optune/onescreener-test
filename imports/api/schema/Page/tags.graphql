@@ -1,0 +1,7 @@
+type Tags {
+  name: String
+}
+
+input TagsInput {
+  name: String
+}
