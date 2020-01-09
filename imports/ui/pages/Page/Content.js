@@ -18,6 +18,7 @@ import { SubTitle } from '../../components/atoms/text/SubTitle'
 
 import { Page } from '../../components/atoms/layout/Page'
 import { Row } from '../../components/atoms/layout/Row'
+import TagInput from '../../components/tag/TagInput'
 
 // Molecules
 import { ButtonBar } from '../../components/molecules/forms/ButtonBar'
@@ -99,6 +100,10 @@ const Content = ({ page, navigate }) => {
       <Row>
         <MediumText>{t('page.content.text.label')}</MediumText>
         <Input value={text} onChange={e => setText(e.target.value)} />
+      </Row>
+
+      <Row>
+        <TagInput />
       </Row>
 
       <ButtonBar
