@@ -36,7 +36,7 @@ const Li = styled.li`
   font-size: 1rem;
   list-style: none;
   border-radius: 0.5rem;
-  margin: 0.3rem 0.3rem
+  margin: 0.3rem 0.3rem;
   background: #27e200;
 `
 const Span = styled.span`
@@ -52,7 +52,7 @@ const DeleteTag = styled.span`
   text-align: center;
   font-size: 1rem;
   margin: 0 0.3rem;
-  color: #0052cc;
+  color: black;
   border-radius: 50%;
   background: #fff;
   cursor: pointer;
