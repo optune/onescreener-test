@@ -14,6 +14,8 @@ export const PAGE = gql`
         }
         size
         text
+        color
+        font
       }
     }
   }

@@ -6,8 +6,12 @@ type Logo {
   image: LogoImage
   size: String
   text: String
+  color: String
+  font: String
 }
 
 input LogoInput {
   text: String!
+  color: String!
+  font: String!
 }
