@@ -6,7 +6,6 @@ import { ColorSwatch } from '../../atoms/logo/ColorSwatch'
 import { ColorPicker } from '../../atoms/logo/ColorPicker'
 import { FontPicker } from '../../atoms/logo/FontPicker'
 import { SubText } from '../../atoms/text/SubText'
-import { SubTitle } from '../../atoms/text/SubTitle'
 
 // Styles
 const SettingsWrap = styled.div`

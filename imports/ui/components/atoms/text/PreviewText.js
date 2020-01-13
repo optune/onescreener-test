@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import { ColorLightGrey } from '../../../styles/color'
 

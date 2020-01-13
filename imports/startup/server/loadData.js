@@ -23,7 +23,9 @@ export const loadData = () => {
             'http://res.cloudinary.com/optune-me/image/upload/v1565795543/onescreener-v2/prod/ashley-afterhour-1/rSDDmPGA-2_zvdzqp.png',
         },
         size: 'M',
-        text: '',
+        text: 'Logo Test',
+        color: 'rgba(0,0,0,1)',
+        font: 'Open Sans',
       },
       userId,
     })

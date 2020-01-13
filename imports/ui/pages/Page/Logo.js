@@ -34,15 +34,10 @@ const Logo = ({ page }) => {
     logo: { text: '', color: 'rgba(0, 0, 0, 1)', font: 'Open Sans' },
   }
 
-  console.log(logo.text, logo.color, logo.font)
-
   const colors = logo.color.split(',').map(color => color.replace(/\D/g, ''))
-
-  // const colors = [0, 0, 0, 1]
 
   const [text, setText] = useState(logo.text)
   const [activeFontFamily, setActiveFontFamily] = useState(logo.font)
-  // const [activeFontFamily, setActiveFontFamily] = useState('Open Sans')
   const [displayColorPicker, setDisplayColorPicker] = useState(false)
   const [chosenColor, setChosenColor] = useState({
     r: colors[0],
