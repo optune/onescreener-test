@@ -2,26 +2,23 @@ import { getPage } from './utils/getPage'
 import { updatePage } from './utils/updatePage'
 
 const INCLUDED_FIELDS = {
-  logo: 1,
+  templateId: 1,
 }
 
-export const changeLogo = function(root, { input }, { userId }) {
+export const changeTemplate = function(root, { input }, { userId }) {
   /*
    * Get page & input
    */
 
   const { page } = getPage({ userId })
-  const { logo } = page
-  const { text } = input
+  const { templateId } = input
 
   /*
    * Set values
    */
 
   const values = {
-    logo: {
-      text,
-    },
+    templateId,
   }
 
   /*

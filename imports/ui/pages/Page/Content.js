@@ -1,6 +1,7 @@
 // React
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from '@reach/router'
 import styled from 'styled-components'
 
 // API
@@ -99,6 +100,12 @@ const Content = ({ page, navigate }) => {
       <Row>
         <MediumText>{t('page.content.text.label')}</MediumText>
         <Input value={text} onChange={e => setText(e.target.value)} />
+      </Row>
+
+      <Row>
+        <MediumText>
+          <Link to="/template">{t('page.navigate.template')}</Link>
+        </MediumText>
       </Row>
 
       <ButtonBar

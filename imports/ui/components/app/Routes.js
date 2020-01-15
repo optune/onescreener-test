@@ -11,6 +11,7 @@ import {
   Content,
   Logo,
   Preview,
+  Template,
 } from '/imports/ui/pages'
 
 const NotFound = () => (
@@ -27,6 +28,8 @@ export const Routes = props => (
 
     <Content path="content" {...props} />
     <Logo path="logo" {...props} />
+
+    <Template path="template" {...props} />
 
     <Preview path="preview" {...props} />
 

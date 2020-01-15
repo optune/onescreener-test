@@ -14,5 +14,8 @@ describe(__filename, function() {
     it('changeLogo', function() {
       assert.isFunction(Mutation.changeLogo)
     })
+    it('changeTemplate', function() {
+      assert.isFunction(Mutation.changeTemplate)
+    })
   })
 })

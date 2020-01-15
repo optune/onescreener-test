@@ -25,6 +25,18 @@
     },
     "preview": {
       "open": "Open preview"
+    },
+    "navigate": {
+      "template": "Choose a template"
+    }
+  },
+
+  "template": {
+    "subtitle": "Welcome",
+    "title": "Choose a template",
+    "save": "Select template",
+    "navigate": {
+      "edit": "Edit content"
     }
   }
 }
