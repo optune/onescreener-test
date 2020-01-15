@@ -6,6 +6,7 @@ import { LogoBox } from '../organisms/LogoBox'
 import { ContentBox } from '../organisms/ContentBox'
 
 import GlobalStyle from '../../styles/global'
+import { createElement } from 'react'
 
 const PageContainer = styled.div`
   position: absolute;
@@ -50,6 +51,16 @@ export const Page = ({ page }) => {
 
   if (page) {
     const { logo, content } = page
+    console.log('prev page\n', logo, logo.fontUrl, logo.font)
+
+    const { fontUrl, font } = logo
+
+    let style = document.createElement('style')
+    // style.id = `font-${font.toLowerCase().replace(' ', '-')}`
+    // style.setAttribute('data-is-preview', 'true')
+    style.innerHTML = fontUrl + ` .apply-font > * {font-family: '${font}';}`
+
+    document.getElementsByTagName('head')[0].appendChild(style)
 
     PageComponent = (
       <Fragment>

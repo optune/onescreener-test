@@ -93,13 +93,27 @@ const Logo = ({ page }) => {
         mutation={CHANGE_LOGO}
         navLink="/content"
         navText="Edit Content"
-        onSave={save =>
-          save({
+        onSave={save => {
+          console.log(
+            document
+              .getElementById(
+                `font-${activeFontFamily.toLowerCase().replace(' ', '-')}`
+              )
+              .innerHTML.toString()
+              .replace(/\s+/g, ' ')
+          )
+          return save({
             text,
             color: `rgba(${chosenColor.r}, ${chosenColor.g}, ${chosenColor.b}, ${chosenColor.a})`,
             font: activeFontFamily,
+            fontUrl: document
+              .getElementById(
+                `font-${activeFontFamily.toLowerCase().replace(' ', '-')}`
+              )
+              .innerHTML.toString()
+              .replace(/\s+/g, ' '),
           })
-        }
+        }}
         refetchQuery={PAGE}
         saveText={t('page.logo.save')}
         previewText={t('page.preview.open')}
