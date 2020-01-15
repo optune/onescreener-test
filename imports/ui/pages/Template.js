@@ -35,9 +35,7 @@ const Template = ({ page }) => {
         <BigText>{t('template.title')}</BigText>
       </Row>
 
-      <Row>
-        {/* TODO: add template carousel */}
-      </Row>
+      <Row>{/* TODO: add template carousel */}</Row>
 
       <ButtonBar
         dirty={dirty}
