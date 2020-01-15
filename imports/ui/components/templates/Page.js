@@ -54,11 +54,9 @@ export const Page = ({ page }) => {
 
     const { fontUrl, font } = logo
 
+    // Importing font to page
     let style = document.createElement('style')
-    // style.id = `font-${font.toLowerCase().replace(' ', '-')}`
-    // style.setAttribute('data-is-preview', 'true')
-    style.innerHTML = fontUrl + ` .apply-font > * {font-family: '${font}';}`
-
+    style.innerHTML = fontUrl + ` .apply-font > * {font-family: '${font}';}` // Applying font to the logo
     document.getElementsByTagName('head')[0].appendChild(style)
 
     PageComponent = (
