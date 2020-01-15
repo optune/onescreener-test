@@ -17,10 +17,10 @@ describe(__filename, function() {
     const id = Pages.insert({ title: 'Page Title', text: 'Test Text', userId })
     assert.ok(id)
   })
-  it('Tempalates', function() {
-    assert.isFunction(Tempalates.find)
+  it('Templates', function() {
+    assert.isFunction(Templates.find)
 
-    const id = Tempalates.insert({ title: 'Page Title', text: 'Test Text' })
+    const id = Templates.insert({ title: 'Page Title', text: 'Test Text' })
     assert.ok(id)
   })
 })
