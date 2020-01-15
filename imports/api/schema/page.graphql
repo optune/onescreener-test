@@ -5,3 +5,7 @@ type Page {
   content: Content
   logo: Logo
 }
+
+input TemplateInput {
+  templateId: String!
+}

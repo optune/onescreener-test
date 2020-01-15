@@ -15,3 +15,9 @@ export const CHANGE_LOGO = gql`
     changeLogo(input: $values)
   }
 `
+
+export const CHANGE_TEMPLATE = gql`
+  mutation changeTemplate($values: TemplateInput!) {
+    changeTemplate(input: $values)
+  }
+`
