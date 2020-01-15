@@ -6,7 +6,6 @@ import { LogoBox } from '../organisms/LogoBox'
 import { ContentBox } from '../organisms/ContentBox'
 
 import GlobalStyle from '../../styles/global'
-import { createElement } from 'react'
 
 const PageContainer = styled.div`
   position: absolute;
