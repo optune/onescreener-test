@@ -26,7 +26,6 @@ export const loadData = () => {
         text: 'Logo Test',
         color: 'rgba(0,0,0,1)',
         font: 'Open Sans',
-        fontUrl: '',
       },
       userId,
     })

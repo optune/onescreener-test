@@ -8,12 +8,10 @@ type Logo {
   text: String
   color: String
   font: String
-  fontUrl: String
 }
 
 input LogoInput {
   text: String!
   color: String!
   font: String!
-  fontUrl: String!
 }

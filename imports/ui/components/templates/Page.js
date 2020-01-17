@@ -50,14 +50,6 @@ export const Page = ({ page }) => {
 
   if (page) {
     const { logo, content } = page
-    console.log('prev page\n', logo, logo.fontUrl, logo.font)
-
-    const { fontUrl, font } = logo
-
-    // Importing font to page
-    let style = document.createElement('style')
-    style.innerHTML = fontUrl + ` .apply-font > * {font-family: '${font}';}` // Applying font to the logo
-    document.getElementsByTagName('head')[0].appendChild(style)
 
     PageComponent = (
       <Fragment>

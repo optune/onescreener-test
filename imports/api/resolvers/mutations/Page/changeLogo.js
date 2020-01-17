@@ -12,7 +12,7 @@ export const changeLogo = function(root, { input }, { userId }) {
 
   const { page } = getPage({ userId })
   const { logo } = page
-  const { text, color, font, fontUrl } = input
+  const { text, color, font } = input
 
   /*
    * Set values
@@ -23,7 +23,6 @@ export const changeLogo = function(root, { input }, { userId }) {
       text,
       color,
       font,
-      fontUrl,
     },
   }
 

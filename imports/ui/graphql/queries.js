@@ -16,7 +16,6 @@ export const PAGE = gql`
         text
         color
         font
-        fontUrl
       }
     }
   }
