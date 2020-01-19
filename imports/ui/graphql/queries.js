@@ -7,6 +7,7 @@ export const PAGE = gql`
         title
         type
         text
+        customHTML
       }
       logo {
         image {
@@ -14,6 +15,9 @@ export const PAGE = gql`
         }
         size
         text
+        color
+        font
+        fontUrl
       }
     }
   }

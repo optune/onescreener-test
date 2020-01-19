@@ -6,6 +6,7 @@ enum ContentType {
 type Content {
   title: String
   text: String
+  customHTML: String
   type: ContentType
 }
 

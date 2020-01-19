@@ -34,7 +34,7 @@ describe(__filename, function() {
         text: 'Test Text',
         type: ContentType.TEXT,
       },
-      logo: { text: 'Logo Text' },
+      logo: { text: 'Logo Text', color: 'rgba(1, 1, 1, 1)', font: 'Open Sans' },
       userId,
     })
     pageBefore = Pages.findOne(pageId)

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import { LogoBox } from '../organisms/LogoBox'
 import { ContentBox } from '../organisms/ContentBox'
+import { Sponsors } from '../molecules/sponsors/Sponsors'
 
 import GlobalStyle from '../../styles/global'
 
@@ -37,6 +38,7 @@ const BackLink = styled.a`
   transform-origin: 100% 100%;
   right: 0;
   color: #ffffff;
+  z-index: 3;
 
   & h1 {
     color: #808080;
@@ -50,6 +52,12 @@ export const Page = ({ page }) => {
 
   if (page) {
     const { logo, content } = page
+    const { fontUrl, font } = logo
+
+    // Importing font to page
+    let style = document.createElement('style')
+    style.innerHTML = fontUrl + ` .apply-font > * {font-family: '${font}';}` // Applying font to the logo
+    document.getElementsByTagName('head')[0].appendChild(style)
 
     PageComponent = (
       <Fragment>
@@ -73,6 +81,7 @@ export const Page = ({ page }) => {
           {/* Content */}
           <ContentBox content={content} />
         </PageContainer>
+        <Sponsors />
       </Fragment>
     )
   }

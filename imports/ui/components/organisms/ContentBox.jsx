@@ -3,6 +3,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { TextBox } from './TextBox'
+import { CustomBoxHTML } from './CustomBoxHTML'
 
 import { MediaSmall } from '../../styles/media'
 
@@ -101,10 +102,12 @@ export const ContentBox = ({ content }) => {
    */
 
   let Content
+  const customHTML = content.customHTML || '<div>Hello, Inserted HTML </div>'
 
   switch (type) {
     case 'TEXT':
-      Content = <TextBox {...colors}>{text}</TextBox>
+      Content = <CustomBoxHTML customHTML={customHTML} {...colors} />
+      // Content = <TextBox {...colors}>{text}</TextBox>
       break
 
     default:
